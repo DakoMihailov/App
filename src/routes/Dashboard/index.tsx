@@ -1,9 +1,7 @@
-function Dashboard() {
-	return (
-		<div>
-			<h1>hhh</h1>
-		</div>
-	);
-}
+import * as React from 'react';
+
+const Dashboard: React.FC = () => {
+	return <h1>hhh</h1>;
+};
 
 export default Dashboard;
