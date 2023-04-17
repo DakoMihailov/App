@@ -50,14 +50,14 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "jest",
+		"test": "jest --watchAll --coverage",
 		"eject": "react-scripts eject",
-		"lint": "tsc --noEmit && eslint src/**/*.ts{,x} --fix --cache --max-warnings=0"
+		"lint": "tsc --noEmit && eslint src/**/*.ts{,x} --fix --cache --max-warnings=0",
+		"cy:open": "cypress open"
 	},
 	"lint-staged": {
 		"**/*.{js,jsx,ts,tsx}": [
-			"npm run lint",
-			"npm run test"
+			"npm run lint"
 		]
 	},
 	"eslintConfig": {
@@ -81,9 +81,12 @@
 	"devDependencies": {
 		"@babel/preset-typescript": "^7.21.4",
 		"@types/jest": "^29.5.0",
+		"chai": "^4.3.7",
+		"cypress": "^12.9.0",
 		"husky": "^8.0.3",
 		"jest-environment-jsdom": "^29.5.0",
 		"lint-staged": "^13.2.1",
+		"mocha": "^10.2.0",
 		"ts-jest": "^29.1.0"
 	},
 	"jest": {

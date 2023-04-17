@@ -98,7 +98,10 @@ const Landing: React.FC = () => {
 							left: '13%',
 						}}
 					>
-						<Typography sx={{ fontSize: '16px', marginBottom: '2vh' }}>
+						<Typography
+							data-testid="mainTxt"
+							sx={{ fontSize: '16px', marginBottom: '2vh' }}
+						>
 							WELCOME TO THE MARKETPLACE
 						</Typography>
 						<Typography sx={{ fontSize: '14px' }}>

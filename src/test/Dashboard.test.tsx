@@ -11,8 +11,8 @@ beforeEach(() => {
 	document.body.appendChild(container);
 });
 
-describe('App', function () {
-	it('should display pass in number', function () {
+describe('Dashboard', function () {
+	it('should display', function () {
 		act(() => {
 			ReactDOM.createRoot(container).render(<Dashboard />);
 		});
