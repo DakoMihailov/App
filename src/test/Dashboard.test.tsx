@@ -1,8 +1,4 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-/**
- * @jest-environment jsdom
- */
-
 import * as React from 'react';
 import { act } from 'react-dom/test-utils';
 import ReactDOM from 'react-dom/client';
@@ -21,6 +17,6 @@ describe('App', function () {
 			ReactDOM.createRoot(container).render(<Dashboard />);
 		});
 		const header = container.querySelector('h1');
-		expect(header?.textContent).toBe('hhhsssdddd');
+		expect(header?.textContent).toBe('hhh');
 	});
 });

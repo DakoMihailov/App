@@ -16,7 +16,6 @@
 		"@testing-library/jest-dom": "^5.16.5",
 		"@testing-library/react": "^13.4.0",
 		"@testing-library/user-event": "^13.5.0",
-		"@types/jest": "^27.5.2",
 		"@types/node": "^16.18.23",
 		"@types/react": "^18.0.33",
 		"@types/react-dom": "^18.0.11",
@@ -50,13 +49,14 @@
 	"scripts": {
 		"start": "react-scripts start",
 		"build": "react-scripts build",
-		"test": "react-scripts test",
+		"test": "jest",
 		"eject": "react-scripts eject",
 		"lint": "tsc --noEmit && eslint src/**/*.ts{,x} --fix --cache --max-warnings=0"
 	},
 	"lint-staged": {
 		"**/*.{js,jsx,ts,tsx}": [
-			"npm run lint"
+			"npm run lint",
+			"npm run test"
 		]
 	},
 	"eslintConfig": {
@@ -78,7 +78,17 @@
 		]
 	},
 	"devDependencies": {
+		"@babel/preset-typescript": "^7.21.4",
+		"@types/jest": "^29.5.0",
 		"husky": "^8.0.3",
-		"lint-staged": "^13.2.1"
+		"jest-environment-jsdom": "^29.5.0",
+		"lint-staged": "^13.2.1",
+		"ts-jest": "^29.1.0"
+	},
+	"jest": {
+		"testEnvironment": "jsdom",
+		"globals": {
+			"IS_REACT_ACT_ENVIRONMENT": true
+		}
 	}
 }
